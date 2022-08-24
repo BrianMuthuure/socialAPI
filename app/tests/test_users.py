@@ -41,6 +41,7 @@ def test_login_user(request):
         config("SECRET_KEY"),
         algorithms=[config("ALGORITHM")])
     res_user_id = payload.get("user_id")
+    request.config.cache.set("access_token", login_res.access_token)
     assert res_user_id == user_id
     assert login_res.token_type == "bearer"
     assert res.status_code == starlette.status.HTTP_200_OK
