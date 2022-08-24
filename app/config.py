@@ -1,3 +1,7 @@
+from decouple import config
+
+JWT_SECRET = config("JWT_SECRET", cast=str)
+
 # from pydantic import BaseSettings
 #
 #

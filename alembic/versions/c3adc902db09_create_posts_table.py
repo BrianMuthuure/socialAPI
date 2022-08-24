@@ -1,7 +1,7 @@
 """create posts table
 
 Revision ID: c3adc902db09
-Revises: 
+Revises:
 Create Date: 2022-08-19 11:05:46.649355
 
 """
@@ -17,8 +17,17 @@ depends_on = None
 
 
 def upgrade() -> None:
-    op.create_table('posts', sa.Column('id', sa.Integer(), nullable=False, primary_key=True),
-                    sa.Column('title', sa.String(), nullable=False))
+    op.create_table(
+        'posts',
+        sa.Column(
+            'id',
+            sa.Integer(),
+            nullable=False,
+            primary_key=True),
+        sa.Column(
+            'title',
+            sa.String(),
+            nullable=False))
     pass
 
 
