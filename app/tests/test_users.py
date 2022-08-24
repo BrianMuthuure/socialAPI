@@ -3,7 +3,7 @@ import pytest
 import starlette.status
 from jose import jwt
 from app import schemas
-from app.tests.routers.utils import random_email, \
+from app.tests.conftest import random_email,\
     get_random_string, get_test_user_token, client
 
 

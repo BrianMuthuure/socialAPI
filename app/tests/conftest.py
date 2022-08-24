@@ -1,6 +1,5 @@
 import random
 import string
-
 from passlib.hash import bcrypt
 
 from app.config import JWT_SECRET
